@@ -1,0 +1,54 @@
+openapi: 3.0.0
+paths:
+  /:
+    get:
+      operationId: getHello
+      parameters: []
+      responses:
+        "200":
+          description: ""
+  /users:
+    get:
+      operationId: getUsers
+      parameters: []
+      responses:
+        "200":
+          description: ""
+      tags: &a1
+        - Users
+  "/users/{id}":
+    get:
+      operationId: getUser
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        "200":
+          description: ""
+      tags: *a1
+  /tests:
+    get:
+      operationId: getTest
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        "200":
+          description: ""
+      tags:
+        - Tests
+info:
+  title: Test Swagger
+  description: Pending
+  version: "1.0"
+  contact: {}
+tags: []
+servers: []
+components:
+  schemas: {}
